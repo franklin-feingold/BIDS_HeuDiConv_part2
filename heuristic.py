@@ -29,7 +29,7 @@ def infotodict(seqinfo):
     info = {t1w: [], dti1: [], dti2: [],  breathhold1400: [], eye645: [], eye1400: [], checker645: [], checker1400: [], rest1_645: [], rest1_1400: [], rest1_2500: [], rest2_645: [], rest2_1400: [], rest2_2500: []}
     
     for idx, s in enumerate(seqinfo):
-        if (s.dim3 == 192) and (s.dim4 == 1) and ('MPRAGE' in s.protocol_name):
+        if (s.dim4 == 1) and ('MPRAGE' in s.protocol_name):
             info[t1w] = [s.series_id]
         if (s.dim3 == 64) and (s.dim4 == 137) and ('DTI_mx_137_session1' in s.protocol_name):
             info[dti1] = [s.series_id]
