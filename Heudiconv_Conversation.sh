@@ -25,7 +25,6 @@ docker pull nipy/heudiconv:latest
 for subj in 2475376 3893245; do 
 echo "Processing ${subj}"
 
-###!!!!Important to add to text, getting dcmtk link to download
 ######Anatomical Organization######
 ####Add Protocol Name to MPRAGE DICOMs
 ${dcmtk}/usr/local/bin/dcmodify -i "(0018,1030)=MPRAGE" ${dcmdir}/${subj}/anat/*.dcm
